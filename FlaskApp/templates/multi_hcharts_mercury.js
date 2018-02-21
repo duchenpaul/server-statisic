@@ -15,6 +15,7 @@ $(function () {
                 // }
                 zoomType: 'x'
             },
+            
             rangeSelector: {
               buttons: [{
                         type: 'hour',
@@ -34,7 +35,7 @@ $(function () {
                         text: 'All'
                     }],
               inputEnabled: $('#container').width() > 480,
-                selected: 1
+                selected: 0
             },
             exporting:{
               enabled:false
@@ -98,7 +99,7 @@ $(function () {
                         text: 'All'
                     }],
               inputEnabled: $('#container').width() > 480,
-                selected: 1
+                selected: 0
             },
             exporting:{
               enabled:false

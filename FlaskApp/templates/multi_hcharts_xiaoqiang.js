@@ -15,6 +15,9 @@ $(function () {
                 // }
                 zoomType: 'x'
             },
+            legend: {
+                enabled: true,
+            },
             rangeSelector: {
               buttons: [{
                         type: 'hour',
@@ -78,10 +81,6 @@ $(function () {
             split: true
             },
 
-            legend: {
-                enabled: false
-            },
-
 
         });
     
@@ -116,6 +115,7 @@ $(function () {
               inputEnabled: $('#container').width() > 480,
                 selected: 1
             },
+
             exporting:{
               enabled:false
             },
@@ -220,6 +220,9 @@ $(function () {
                 //     load: requestData
                 // }
                 zoomType: 'x'
+            },
+            legend: {
+                enabled: true,
             },
             rangeSelector: {
               buttons: [{
