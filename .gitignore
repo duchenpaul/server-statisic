@@ -1,0 +1,11 @@
+
+*.ini
+*.ini
+FlaskApp/test.py
+get_data_from_xiaoqiang/config.ini
+FlaskApp/config.ini
+config.ini
+*.csv
+get_data_from_xiaoqiang/config.ini
+*.pyc
+config.ini
