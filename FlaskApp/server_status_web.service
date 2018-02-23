@@ -1,0 +1,37 @@
+# sudo vim /etc/systemd/system/server_status_web.service
+# sudo systemctl daemon-reload 
+# sudo systemctl restart server_status_web 
+# sudo systemctl status server_status_web
+# sudo systemctl enable server_status_web
+
+
+[Unit]
+Description=server_status_web show the server status on web
+After=syslog.target
+After=network.target
+#After=mysqld.service
+#After=postgresql.service
+#After=memcached.service
+#After=redis.service
+
+[Service]
+# Modify these two values and uncomment them if you have
+# repos with lots of files and get an HTTP error 500 because
+# of that
+###
+#LimitMEMLOCK=infinity
+#LimitNOFILE=65535
+RestartSec=2s
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi/run/server_statisic/FlaskApp
+ExecStart=/home/pi/run/server_statisic/FlaskApp/server_status_web.py
+Restart=always
+Environment=USER=pi HOME=/home/pi
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=server_status_web
+
+[Install]
+WantedBy=multi-user.target
